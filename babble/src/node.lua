@@ -76,7 +76,7 @@ function Node:update(dt, skip)
    return true
 end
 
-function Node:draw()
+function Node.draw()
 end
 
 for name, component in pairs(Components) do

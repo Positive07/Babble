@@ -8,7 +8,7 @@ function Print:init(node, str)
    self.str  = str
 end
 
-function Print:update(dt)
+function Print:update()
    print(self.str)
 
    return true

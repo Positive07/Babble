@@ -1,13 +1,12 @@
-local Path = (...):gsub('%.init$', '')
+local path = (...):gsub('%.init$', '')
 
-local Components = {}
-
-Components.link   = require(Path..".link")
-Components.print  = require(Path..".print")
-Components.script = require(Path..".script")
-Components.setter = require(Path..".setter")
-Components.text   = require(Path..".text")
-Components.wait   = require(Path..".wait")
-Components.clear  = require(Path..".clear")
+local Components = {
+   link   = require(path..".link"),
+   script = require(path..".script"),
+   setter = require(path..".setter"),
+   text   = require(path..".text"),
+   wait   = require(path..".wait"),
+   clear  = require(path..".clear")
+}
 
 return Components

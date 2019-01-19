@@ -1,6 +1,6 @@
 return function()
    local class = {}
-   class.init  = function(obj) end
+   class.init  = function() end
    class.mt    = {__index = class}
 
    return setmetatable(class, {

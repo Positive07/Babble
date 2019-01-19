@@ -33,7 +33,7 @@ function Text:init(node, str, options)
    self.typeSound     = options and options.typeSound
    self.explicit      = options and options.explicit
 
-   self.content = Contents.text(id)
+   self.content = Contents.text()
    self.content:setModifier(1, "color",         self.color)
    self.content:setModifier(1, "font",          self.font)
    self.content:setModifier(1, "underline",     self.underline)

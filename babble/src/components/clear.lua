@@ -7,7 +7,7 @@ function Clear:init(node)
    self.node = node
 end
 
-function Clear:update(dt)
+function Clear:update()
    self.node.parent:clear()
 
    return true

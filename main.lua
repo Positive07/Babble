@@ -25,12 +25,11 @@ local b1, b2 =  math.sqrt( 3 )/2, -0.5
 
 local function HSVToRGB( h, s, v, a )
    h=h+math.pi/2
-   local r, g, b = 1, 1, 1
    local h1, h2 = math.cos( h ), math.sin( h )
 
-   r = h1*r1 + h2*r2
-   g = h1*g1 + h2*g2
-   b = h1*b1 + h2*b2
+   local r = h1*r1 + h2*r2
+   local g = h1*g1 + h2*g2
+   local b = h1*b1 + h2*b2
 
    g = g + (1-g)*s
    b = b + (1-b)*s
@@ -106,6 +105,4 @@ function love.keypressed(key)
       d:clear()
       d:switch("start")
    end
-
-   last_pressed = key
 end

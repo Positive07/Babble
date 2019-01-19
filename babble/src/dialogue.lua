@@ -118,7 +118,7 @@ function Dialogue:update(dt, skip)
    return not self.current
 end
 
-function Dialogue:render(w, h)
+function Dialogue:render()
    self.buffer  = {}
    self.curLine = {}
    self.curX    = 0
@@ -188,7 +188,7 @@ function Dialogue:renderText(text)
 
       local _, count = text:gsub('\n', '\n')
       if count > 0 then
-         for i = 1, count do
+         for _ = 1, count do
             self.curX = 0
             self.curY = self.curY + self.curH
          end
